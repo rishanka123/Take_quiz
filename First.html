@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="quiz-container">
+        <div id="quiz-creation">
+            <h2>Create Quiz</h2>
+            <form id="quiz-form">
+                <label for="question">Question:</label><br>
+                <input type="text" id="question" required><br><br>
+                
+                <label for="option1">Option 1:</label><br>
+                <input type="text" id="option1" required><br>
+                
+                <label for="option2">Option 2:</label><br>
+                <input type="text" id="option2" required><br>
+                
+                <label for="option3">Option 3:</label><br>
+                <input type="text" id="option3" required><br>
+                
+                <label for="option4">Option 4:</label><br>
+                <input type="text" id="option4" required><br><br>
+                
+                <label for="correct-answer">Correct Answer (1-4):</label><br>
+                <input type="number" id="correct-answer" min="1" max="4" required><br><br>
+                
+                <button type="submit">Add Question</button>
+            </form>
+            <button onclick="submitQuiz()">Save Quiz</button>
+        </div>
+
+        <div id="quiz-taking">
+            <h2>Take Quiz</h2>
+            <div id="quiz-message">
+                <img src="c:\Users\Dell\Desktop\html\take your quiz.jpg" alt="Take the Quiz">
+            </div>
+            <div id="quiz-questions">
+                <!-- Questions and options will be dynamically loaded here -->
+            </div>
+            <button onclick="gradeQuiz()">Submit Answers</button>
+            <div id="quiz-results">
+                <!-- Quiz results will be displayed here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
